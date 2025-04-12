@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "drawarea.h"
 
+#include <QDir>
+#include <QFileDialog>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -17,6 +20,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_actionNew_triggered();
+    void on_actionOpen_triggered();
+    void on_actionSave_triggered();
+    void on_actionSave_as_triggered();
+    void on_actionPrint_triggered();
+    void on_actionExit_triggered();
 
 private:
     Ui::MainWindow *ui;
